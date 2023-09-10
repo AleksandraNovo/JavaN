@@ -38,34 +38,49 @@ public class Homework1 {
 
     // task 2
     static int normalize(int angle) {
-        // Ваш код здесь
-        return angle;
+        int n = angle % 360;
+        if (n < 0){
+            n = 360 + n;
+        }
+        return n;
     }
 
 
     // task 3
     static int max(int x, int y, int z) {
-        // Ваш код здесь
+        int n = Math.max(x, y);
+        n = Math.max(n, z);
+        System.out.println(n);
         return 0;
     }
 
 
     // task 4
     static int fact(int n) {
-        // Ваш код здесь
-        return 0;
+        if (n == 1) {
+            return 1;
+        } else {
+            return n * fact(n - 1);
+        }
     }
 
 
     // task 5
     static BigInteger fact(BigInteger n) {
-        // Ваш код здесь
-        return null;
+        if (n.equals(BigInteger.ONE)) {
+            return n;
+        }
+        return n.multiply(fact(n.subtract(BigInteger.ONE)));
     }
 
     // task 6
     static void multiplTable() {
-        // Ваш код здесь
+        for (int i = 0; i <= 10; i++){
+            for (int j = 0; j <= 10; j++){
+                int p = i * j;
+                System.out.println(i+"*"+j+"="+p);
+            }
+        }
     }
 
 
