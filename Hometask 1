@@ -67,10 +67,10 @@ public class Homework1 {
 
     // task 5
     static BigInteger fact(BigInteger n) {
-        if (n.equals(BigInteger.ONE)) {
+        if (n.equals(BigInteger.ONE)) { //equals о же самое что и =, если н равно один - вернуть н
             return n;
         }
-        return n.multiply(fact(n.subtract(BigInteger.ONE)));
+        return n.multiply(fact(n.subtract(BigInteger.ONE))); // multiply = *
     }
 
     // task 6
@@ -86,7 +86,7 @@ public class Homework1 {
 
     // task 7
     static int average(int... nums) {
-        // Ваш код здесь
+        return Arrays.stream(nums).sum()/nums.length;
         return 0;
     }
 
@@ -100,21 +100,33 @@ public class Homework1 {
 
     // task 9
     static int[] reverse(int[] arr) {
-        // Ваш код здесь
-        return null;
+        for(int i = arr.length - 1; i >= 0; i--){
+            System.out.println(arr[i]);
+        }
     }
 
 
     // task 10
     static int[] sort(int[] arr) {
-        // Ваш код здесь
+        for (int i = 0; i < arr.length-1; i++){
+            for (int j = i + 1; j < arr.length; j++){
+                if (arr[i]>arr[j]){
+                    int a = arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=a;
+                }
+            }
+        }
+        for (int t: arr){
+            System.out.println(t);
+        }
         return null;
     }
 
 
     // task 11
     static int[] removeExtra(int[] arr, int n) {
-        // Ваш код здесь
+        return Arrays.stream(arr).filter(i -> i != n).toArray();
         return null;
     }
 }
