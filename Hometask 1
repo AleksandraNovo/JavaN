@@ -93,8 +93,8 @@ public class Homework1 {
 
     // task 8
     static boolean isMagicSquare(int[][] square) {
-        // Ваш код здесь
-        return false;
+        
+        return null;
     }
 
 
