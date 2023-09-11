@@ -93,8 +93,26 @@ public class Homework1 {
 
     // task 8
     static boolean isMagicSquare(int[][] square) {
-        
-        return null;
+        int len = square[0].length;
+        int d1 = 0, d2 = 0;
+        for (int i = 0; i < len; i++){
+            d1 += square[i][i];
+            d2 += square[i][len- i - 1];
+        }
+        if (d1 != d2){
+            return false;
+        }
+        for (int i = 0; i < len; i++){
+            int str = 0, stl = 0;
+            for (int j = 0; j < len; j++){
+                str += square[i][j];
+                stl += square[j][i];
+            }
+            if (str != d1 || stl != d2){
+                return false;
+            }
+        }
+        return true;
     }
 
 
